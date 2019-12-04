@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blackbackg"
+    android:keepScreenOn="true"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/life"
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+
+        <ImageView
+            android:id="@+id/life1"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_life" />
+        <ImageView
+            android:id="@+id/life2"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/life1"
+            android:src="@drawable/ic_life" />
+        <ImageView
+            android:id="@+id/life3"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/life2"
+            android:src="@drawable/ic_life" />
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="700dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingTop="30dp"
+        android:paddingBottom="50dp">
+
+        <LinearLayout
+            android:id="@+id/row1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp">
+
+            <ImageView
+                android:id="@+id/main_IMG_a1"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_stone" />
+
+            <ImageView
+                android:id="@+id/main_IMG_a2"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_stone" />
+
+            <ImageView
+                android:id="@+id/main_IMG_a3"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_stone" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/row2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp">
+
+            <ImageView
+                android:id="@+id/main_IMG_a4"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_stone" />
+
+            <ImageView
+                android:id="@+id/main_IMG_a5"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_stone" />
+
+            <ImageView
+                android:id="@+id/main_IMG_a6"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_stone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp">
+
+            <ImageView
+                android:id="@+id/main_IMG_a7"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_stone" />
+
+            <ImageView
+                android:id="@+id/main_IMG_a8"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_stone" />
+
+            <ImageView
+                android:id="@+id/main_IMG_a9"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_stone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row4"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp">
+
+            <ImageView
+                android:id="@+id/main_IMG_a10"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_stone" />
+
+            <ImageView
+                android:id="@+id/main_IMG_a11"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_stone" />
+
+            <ImageView
+                android:id="@+id/main_IMG_a12"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_stone" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/row5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp">
+
+            <ImageView
+                android:id="@+id/main_IMG_a13"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_stone" />
+
+            <ImageView
+                android:id="@+id/main_IMG_a14"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_stone" />
+
+            <ImageView
+                android:id="@+id/main_IMG_a15"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_stone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row6"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+
+            android:orientation="horizontal"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp">
+
+            <ImageView
+                android:id="@+id/main_IMG_a16"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_stone" />
+
+            <ImageView
+                android:id="@+id/main_IMG_a17"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_stone" />
+
+            <ImageView
+                android:id="@+id/main_IMG_a18"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_stone" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/row7"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingTop="1dp">
+
+            <ImageView
+                android:id="@+id/main_IMG_a19"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_stone" />
+
+            <ImageView
+                android:id="@+id/main_IMG_a20"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_stone" />
+
+            <ImageView
+                android:id="@+id/main_IMG_a21"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_stone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/miners"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:paddingTop="1dp">
+
+        <ImageView
+            android:id="@+id/main_IMG_a22"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_miner_" />
+
+        <ImageView
+            android:id="@+id/main_IMG_a23"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_miner_" />
+
+        <ImageView
+            android:id="@+id/main_IMG_a24"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_miner_" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="700dp"
+        android:layout_alignBottom="@+id/miners"
+        android:layout_marginBottom="0dp"
+        android:gravity="bottom">
+
+        <ImageButton
+            android:id="@+id/main_BTN_left"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/buttonshape"
+            android:src="@drawable/ic_left"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" />
+
+        <ImageButton
+            android:id="@+id/main_BTN_right"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/buttonshape"
+            android:src="@drawable/ic_right"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
