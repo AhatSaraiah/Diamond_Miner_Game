@@ -22,7 +22,7 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:layout_marginBottom="-68dp"
-        android:textSize="40dp"
+        android:textSize="40sp"
         android:textStyle="bold|normal"
         android:layout_alignBottom="@+id/main_IMG_a1"
         />
@@ -35,7 +35,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="-180dp"
         android:background="@drawable/buttonshape"
-        android:text="Start A New Game"
+        android:text="START A NEW GAME!"
         android:textStyle="bold"
          />
 

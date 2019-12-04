@@ -17,15 +17,14 @@ public class Menu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-         mTextView = findViewById(R.id.menu_text);
-        mTextView.setText("Diamond Miner");
+        mTextView = findViewById(R.id.menu_text);
+        mTextView.setText("Diamond miner");
         mTextView.setTextColor(Color.WHITE);
 
 
-
         newGamebtn = findViewById(R.id.button);
-       newGamebtn.setOnClickListener(new View.OnClickListener() {
-           public void onClick(View v){
+        newGamebtn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
                 goToGameActivity();
 
             }

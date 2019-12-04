@@ -9,7 +9,7 @@ import android.view.animation.BounceInterpolator;
 import android.widget.Button;
 import android.widget.ImageView;
 
-public class GameOver  extends AppCompatActivity {
+public class GameOver extends AppCompatActivity {
     private Button menu;
     private ImageView gameOver;
 
@@ -19,11 +19,11 @@ public class GameOver  extends AppCompatActivity {
         setContentView(R.layout.activity_game_over);
 
         menu = findViewById(R.id.menu_BTN);
-        gameOver=findViewById(R.id.gameOver);
+        gameOver = findViewById(R.id.gameOver);
         animateItCode();
 
         menu.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v){
+            public void onClick(View v) {
                 goToMenuActivity();
                 finish();
             }
@@ -33,7 +33,7 @@ public class GameOver  extends AppCompatActivity {
 
     private void animateItCode() {
         gameOver.setScaleX(0);
-       gameOver.setScaleY(0);
+        gameOver.setScaleY(0);
         gameOver.setRotation(0);
         gameOver.animate()
                 .rotation(360)
