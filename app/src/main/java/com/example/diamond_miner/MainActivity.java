@@ -45,25 +45,25 @@ public class MainActivity extends AppCompatActivity {
                 findViewById(R.id.main_IMG_a5),
                 findViewById(R.id.main_IMG_a6)},
                 {
-                        findViewById(R.id.main_IMG_a7),
-                        findViewById(R.id.main_IMG_a8),
-                        findViewById(R.id.main_IMG_a9)}
+                findViewById(R.id.main_IMG_a7),
+                findViewById(R.id.main_IMG_a8),
+                findViewById(R.id.main_IMG_a9)}
                 , {
                 findViewById(R.id.main_IMG_a10),
                 findViewById(R.id.main_IMG_a11),
                 findViewById(R.id.main_IMG_a12)},
                 {
-                        findViewById(R.id.main_IMG_a13),
-                        findViewById(R.id.main_IMG_a14),
-                        findViewById(R.id.main_IMG_a15)},
+                findViewById(R.id.main_IMG_a13),
+                findViewById(R.id.main_IMG_a14),
+                findViewById(R.id.main_IMG_a15)},
                 {
-                        findViewById(R.id.main_IMG_a16),
-                        findViewById(R.id.main_IMG_a17),
-                        findViewById(R.id.main_IMG_a18)},
+                findViewById(R.id.main_IMG_a16),
+                findViewById(R.id.main_IMG_a17),
+                findViewById(R.id.main_IMG_a18)},
                 {
-                        findViewById(R.id.main_IMG_a19),
-                        findViewById(R.id.main_IMG_a20),
-                        findViewById(R.id.main_IMG_a21)
+                findViewById(R.id.main_IMG_a19),
+                findViewById(R.id.main_IMG_a20),
+                findViewById(R.id.main_IMG_a21)
                 }};
 
 
@@ -76,9 +76,10 @@ public class MainActivity extends AppCompatActivity {
         miners[1].setVisibility(View.INVISIBLE);
         miners[2].setVisibility(View.INVISIBLE);
 
-        lives = new ImageView[]{findViewById(R.id.life1),
-                findViewById(R.id.life2)
-                , findViewById(R.id.life3)};
+        lives = new ImageView[]
+                {findViewById(R.id.life1),
+                 findViewById(R.id.life2)
+                ,findViewById(R.id.life3)};
 
         ImageButton leftbtn = findViewById(R.id.main_BTN_left);
         ImageButton rightbtn = findViewById(R.id.main_BTN_right);
