@@ -7,36 +7,82 @@
     android:background="@drawable/blackbackg"
     tools:context=".Menu">
 
-
     <ImageView
         android:id="@+id/main_IMG_a1"
-        android:layout_width="226dp"
-        android:layout_height="315dp"
+        android:layout_width="200dp"
+        android:layout_height="130dp"
         android:layout_centerHorizontal="true"
         android:src="@drawable/ic_diamond" />
 
+
     <TextView
         android:id="@+id/menu_text"
-        android:layout_width="280dp"
-        android:layout_height="76dp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_marginBottom="-68dp"
-        android:textSize="40sp"
-        android:textStyle="bold|normal"
+        android:layout_width="302dp"
+        android:layout_height="70dp"
         android:layout_alignBottom="@+id/main_IMG_a1"
-        />
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="-76dp"
+        android:textColor="#ffffff"
+        android:textSize="40sp"
+        android:textStyle="bold|normal" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="302dp"
+        android:layout_height="88dp"
+        android:layout_alignBottom="@+id/main_IMG_a1"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="-177dp"
+        android:textColor="#ffffff"
+        android:textSize="25sp"
+        android:textStyle="bold|normal" />
+
+    <EditText
+        android:id="@+id/inputName"
+        android:layout_width="291dp"
+        android:layout_height="57dp"
+        android:labelFor="@+id/name"
+        android:layout_alignBottom="@+id/main_IMG_a1"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="-242dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Name"
+        android:textColor="#ffffff" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/slow_btn"
         android:layout_width="165dp"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:layout_alignBottom="@id/main_IMG_a1"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="-180dp"
+        android:layout_marginBottom="-316dp"
         android:background="@drawable/buttonshape"
-        android:text="START A NEW GAME!"
+        android:text="SLOW MODE!"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/fast_btn"
+        android:layout_width="165dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@id/slow_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-65dp"
+        android:background="@drawable/buttonshape"
+        android:text="FAST MODE!"
         android:textStyle="bold"
-         />
+        />
+    <Button
+        android:id="@+id/sensor_btn"
+        android:layout_width="165dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@id/fast_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-65dp"
+        android:background="@drawable/buttonshape"
+        android:text="SENSOR MODE!"
+        android:textStyle="bold"
+        />
+
 
 </RelativeLayout>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,6 +7,15 @@
     android:background="@drawable/blackbackg"
     android:keepScreenOn="true"
     tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/main_IMG_diamond"
+        android:layout_width="1000dp"
+        android:layout_height="200dp"
+        android:layout_centerVertical="true"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_diamond" />
 
     <RelativeLayout
         android:id="@+id/life"
@@ -20,12 +28,14 @@
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
             android:src="@drawable/ic_life" />
+
         <ImageView
             android:id="@+id/life2"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_toStartOf="@+id/life1"
             android:src="@drawable/ic_life" />
+
         <ImageView
             android:id="@+id/life3"
             android:layout_width="50dp"
@@ -37,15 +47,13 @@
             android:id="@+id/score"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="25dp"
-            />
+            android:textSize="25sp" />
     </RelativeLayout>
 
     <LinearLayout
 
         android:layout_width="match_parent"
         android:layout_height="700dp"
-        android:layout_weight="1"
         android:orientation="vertical"
         android:paddingTop="30dp"
         android:paddingBottom="50dp">
@@ -75,7 +83,7 @@
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
-                android:src="@drawable/ic_stone" />
+                android:src="@drawable/ic_diamond" />
 
             <ImageView
                 android:id="@+id/main_IMG_a3"
@@ -85,17 +93,6 @@
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
                 android:src="@drawable/ic_stone" />
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:id="@+id/row2"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:paddingTop="1dp"
-            android:paddingBottom="1dp">
 
             <ImageView
                 android:id="@+id/main_IMG_a4"
@@ -113,7 +110,18 @@
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
-                android:src="@drawable/ic_stone" />
+                android:src="@drawable/ic_diamond" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/row2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp">
 
             <ImageView
                 android:id="@+id/main_IMG_a6"
@@ -123,16 +131,6 @@
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
                 android:src="@drawable/ic_stone" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/row3"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:paddingTop="1dp"
-            android:paddingBottom="1dp">
 
             <ImageView
                 android:id="@+id/main_IMG_a7"
@@ -141,7 +139,7 @@
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
-                android:src="@drawable/ic_stone" />
+                android:src="@drawable/ic_diamond" />
 
             <ImageView
                 android:id="@+id/main_IMG_a8"
@@ -160,16 +158,6 @@
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
                 android:src="@drawable/ic_stone" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/row4"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:paddingTop="1dp"
-            android:paddingBottom="1dp">
 
             <ImageView
                 android:id="@+id/main_IMG_a10"
@@ -178,7 +166,17 @@
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
-                android:src="@drawable/ic_stone" />
+                android:src="@drawable/ic_diamond" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp">
 
             <ImageView
                 android:id="@+id/main_IMG_a11"
@@ -196,20 +194,7 @@
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
-                android:src="@drawable/ic_stone" />
-
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:id="@+id/row5"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:paddingTop="1dp"
-            android:paddingBottom="1dp">
+                android:src="@drawable/ic_diamond" />
 
             <ImageView
                 android:id="@+id/main_IMG_a13"
@@ -236,15 +221,14 @@
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
-                android:src="@drawable/ic_stone" />
+                android:src="@drawable/ic_diamond" />
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/row6"
+            android:id="@+id/row4"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-
             android:orientation="horizontal"
             android:paddingTop="1dp"
             android:paddingBottom="1dp">
@@ -265,7 +249,7 @@
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
-                android:src="@drawable/ic_stone" />
+                android:src="@drawable/ic_diamond" />
 
             <ImageView
                 android:id="@+id/main_IMG_a18"
@@ -275,17 +259,6 @@
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
                 android:src="@drawable/ic_stone" />
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:id="@+id/row7"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:paddingTop="1dp">
 
             <ImageView
                 android:id="@+id/main_IMG_a19"
@@ -303,7 +276,20 @@
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
-                android:src="@drawable/ic_stone" />
+                android:src="@drawable/ic_diamond" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/row5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp">
 
             <ImageView
                 android:id="@+id/main_IMG_a21"
@@ -313,6 +299,154 @@
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
                 android:src="@drawable/ic_stone" />
+
+            <ImageView
+                android:id="@+id/main_IMG_a22"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_diamond" />
+
+            <ImageView
+                android:id="@+id/main_IMG_a23"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_stone" />
+
+            <ImageView
+                android:id="@+id/main_IMG_a24"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_stone" />
+
+            <ImageView
+                android:id="@+id/main_IMG_a25"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_diamond" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row6"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+
+            android:orientation="horizontal"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp">
+
+            <ImageView
+                android:id="@+id/main_IMG_a26"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_stone" />
+
+            <ImageView
+                android:id="@+id/main_IMG_a27"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_diamond" />
+
+            <ImageView
+                android:id="@+id/main_IMG_a28"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_stone" />
+
+            <ImageView
+                android:id="@+id/main_IMG_a29"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_stone" />
+
+            <ImageView
+                android:id="@+id/main_IMG_a30"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_diamond" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/row7"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingTop="1dp">
+
+            <ImageView
+                android:id="@+id/main_IMG_a31"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_stone" />
+
+            <ImageView
+                android:id="@+id/main_IMG_a32"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_diamond" />
+
+            <ImageView
+                android:id="@+id/main_IMG_a33"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_stone" />
+
+            <ImageView
+                android:id="@+id/main_IMG_a34"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_stone" />
+
+            <ImageView
+                android:id="@+id/main_IMG_a35"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_diamond" />
         </LinearLayout>
     </LinearLayout>
 
@@ -320,13 +454,12 @@
         android:id="@+id/miners"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
         android:gravity="bottom"
         android:orientation="horizontal"
         android:paddingTop="1dp">
 
         <ImageView
-            android:id="@+id/main_IMG_a22"
+            android:id="@+id/main_IMG_a36"
             android:layout_width="0dp"
             android:layout_height="80dp"
             android:layout_weight="1"
@@ -335,7 +468,7 @@
             android:src="@drawable/ic_miner_" />
 
         <ImageView
-            android:id="@+id/main_IMG_a23"
+            android:id="@+id/main_IMG_a37"
             android:layout_width="0dp"
             android:layout_height="80dp"
             android:layout_weight="1"
@@ -344,7 +477,25 @@
             android:src="@drawable/ic_miner_" />
 
         <ImageView
-            android:id="@+id/main_IMG_a24"
+            android:id="@+id/main_IMG_a38"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_miner_" />
+
+        <ImageView
+            android:id="@+id/main_IMG_a39"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_miner_" />
+
+        <ImageView
+            android:id="@+id/main_IMG_a40"
             android:layout_width="0dp"
             android:layout_height="80dp"
             android:layout_weight="1"
@@ -363,24 +514,20 @@
 
         <ImageButton
             android:id="@+id/main_BTN_left"
-            android:layout_width="50dp"
+            android:layout_width="40dp"
             android:layout_height="50dp"
             android:layout_alignParentBottom="true"
             android:background="@drawable/buttonshape"
-            android:src="@drawable/ic_left"
-            android:textColor="#FFFFFF"
-            android:textSize="30sp" />
+            android:src="@drawable/ic_left" />
 
         <ImageButton
             android:id="@+id/main_BTN_right"
-            android:layout_width="50dp"
+            android:layout_width="40dp"
             android:layout_height="50dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:background="@drawable/buttonshape"
-            android:src="@drawable/ic_right"
-            android:textColor="#FFFFFF"
-            android:textSize="30sp" />
+            android:src="@drawable/ic_right" />
 
     </RelativeLayout>
 

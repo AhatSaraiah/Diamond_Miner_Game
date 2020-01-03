@@ -4,6 +4,9 @@ import android.content.Context;
 import android.os.Build;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
+import android.view.animation.AccelerateDecelerateInterpolator;
+import android.view.animation.BounceInterpolator;
+import android.widget.ImageView;
 
 public class signal {
 
@@ -15,6 +18,36 @@ public class signal {
             v.vibrate(duration);
         }
     }
+
+
+    public static void gameOverAnimate(ImageView img) {
+        img.setScaleX(0);
+        img.setScaleY(0);
+        img.setRotation(0);
+        img.animate()
+                .rotation(360)
+                .scaleX(1)
+                .scaleY(1)
+                .setDuration(2000)
+                .setInterpolator(new BounceInterpolator())
+                .start();
+    }
+
+    public static void diamondAnimate(ImageView img) {
+        img.setScaleX(0);
+        img.setScaleY(0);
+        img.setRotation(0);
+        img.animate()
+                .rotation(360)
+                .scaleX(1)
+                .scaleY(1)
+                .setDuration(1000)
+                .setInterpolator(new AccelerateDecelerateInterpolator())
+                .start();
+
+    }
+
+
 
 
 }
