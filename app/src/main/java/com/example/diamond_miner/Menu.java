@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
 public class Menu extends AppCompatActivity {
     private Button slow_btn;
     private Button fast_btn;
@@ -69,7 +70,7 @@ public class Menu extends AppCompatActivity {
 
     public void goToGameActivity(Bundle bundle) {
         Intent startGame = new Intent(Menu.this, MainActivity.class);
-        playerName = name.getText()+"";
+        playerName = name.getText() + "";
         startGame.putExtra("Name_key", playerName);
         startGame.putExtras(bundle);
         startActivity(startGame);

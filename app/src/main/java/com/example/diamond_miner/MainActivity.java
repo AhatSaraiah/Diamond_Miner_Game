@@ -395,7 +395,8 @@ public class MainActivity extends AppCompatActivity {
         playerName = getIntent().getStringExtra("Name_key");
         player pl = new player();
         pl.setName(playerName);
-        pl.setScore(score);
+        int Score = Integer.parseInt(score);
+        pl.setScore(Score);
         Gson gson = new Gson();
         String jsn = gson.toJson(pl);
         Log.d("pttt", "Json=" + jsn);

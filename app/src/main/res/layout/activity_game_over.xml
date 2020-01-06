@@ -7,22 +7,13 @@
     android:background="@drawable/blackbackg"
     tools:context=".GameOver">
 
+
     <ImageView
         android:id="@+id/gameOver"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:contentDescription="game over"
-        android:src="@drawable/ic_game_over"/>
-
-    <FrameLayout
-        android:id="@+id/main_LAY"
-        android:layout_width="match_parent"
-        android:layout_height="174dp"
-        android:layout_alignBottom="@+id/gameOver"
-        android:layout_marginBottom="-251dp"
-        android:background="#cacaca"
-
-        />
+        android:src="@drawable/ic_game_over" />
 
     <TextView
         android:id="@+id/txt_totalScore"
@@ -46,15 +37,41 @@
         android:textSize="30sp"
         android:textStyle="normal|bold" />
 
+    <TextView
+
+        android:id="@+id/txt_notHighScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/txt_name"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="-90dp"
+        android:text="Not in TOP 10"
+        android:textColor="#C21D11"
+        android:textSize="25sp"
+        android:textStyle="normal|bold" />
+
+    <Button
+        android:id="@+id/button_highScoreLayout"
+        android:layout_width="165dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@id/txt_notHighScore"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="-80dp"
+        android:background="@drawable/buttonshape"
+        android:text="Top 10 scores"
+        android:textStyle="bold" />
+
     <Button
         android:id="@+id/menu_BTN"
         android:layout_width="165dp"
         android:layout_height="50dp"
-        android:layout_alignBottom="@+id/main_LAY"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="-55dp"
+        android:layout_alignBottom="@+id/gameOver"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="-290dp"
         android:background="@drawable/buttonshape"
         android:text="Return to menu"
         android:textStyle="bold" />
+
 
 </RelativeLayout>

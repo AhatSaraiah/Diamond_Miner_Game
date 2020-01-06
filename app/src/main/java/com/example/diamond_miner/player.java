@@ -1,48 +1,51 @@
 package com.example.diamond_miner;
 
-import android.location.Location;
+public class player implements Comparable<player> {
+    private String name;
+    private int score;
+    private String date;
 
-public class player {
-   private String name ;
-    private Location location;
-    private String score;
+
+    public player(String name, int score, String date) {
+        this.name = name;
+        this.score = score;
+        this.date = date;
+
+    }
+
     public player() {
     }
 
-    public player(String name, Location location, String score) {
-        this.name = name;
-        this.location = location;
-        this.score = score;
-    }
-
-    public String getScore() {
-        return score;
-    }
-
-    public void setScore(String score) {
-        this.score = score;
-    }
-
-    public Location getLocation() {
-        return location;
-    }
-
-    public void setLocation(Location location) {
-        this.location = location;
-    }
-
-    public String getName() {
-        return name;
-    }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public int compareTo(player p) {
-        return Integer.parseInt(p.getScore())-Integer.parseInt(this.getScore());
+
+    public String getName() {
+        return name;
     }
 
-}
+    public int getScore() {
+        return score;
+    }
 
+    public void setScore(int score) {
+        this.score = score;
+    }
+
+    @Override
+    public String toString() {
+        return "player{" +
+                "name='" + name + '\'' +
+                ", score=" + score +
+                ", date='" + date + '\'' +
+                '}';
+    }
+
+    @Override
+    public int compareTo(player p) {
+        return p.getScore() - this.getScore();
+    }
+}
 

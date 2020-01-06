@@ -1,8 +1,6 @@
 package com.example.diamond_miner;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentTransaction;
-
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,16 +9,22 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 
 public class GameOver extends AppCompatActivity {
-    private Button menu;
+    private Button menu, button_highScoreLayout;
     private ImageView gameOver;
     private String totalScore;
+    private int score;
     private TextView txt_totalScore;
     private TextView txt_name;
     private String playerName;
-   // private topScores topScores;
-    private player currentPlayer;
+    private PlayerManager playerManager;
+    private TextView txt_notHighScore;
+    private boolean newHighScore = false;
 
 
     @Override
@@ -32,12 +36,8 @@ public class GameOver extends AppCompatActivity {
         gameOver = findViewById(R.id.gameOver);
         signal.gameOverAnimate(gameOver);
         setTotalScore();
-
-         //  topScores = new topScores();
-        //   topScores.setActivity(this);
-//            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-//           transaction.replace(R.id.main_LAY, topScores);
-//          transaction.commit();
+        txt_notHighScore = findViewById(R.id.txt_notHighScore);
+        button_highScoreLayout = findViewById(R.id.button_highScoreLayout);
 
         menu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -46,8 +46,26 @@ public class GameOver extends AppCompatActivity {
             }
         });
 
+        button_highScoreLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                clickOnHighScoreBtn();
+            }
+        });
+    }
+
+
+    public void clickOnHighScoreBtn() {
+        DateFormat df = new SimpleDateFormat(Constants.DATE_FORMAT);
+        String date = df.format(Calendar.getInstance().getTime());
+        if (newHighScore) {
+            player p = new player(playerName, score, date);
+            playerManager.addUser(p);
+        }
+
 
     }
+
 
     public void setTotalScore() {
         txt_totalScore = findViewById(R.id.txt_totalScore);
@@ -56,12 +74,12 @@ public class GameOver extends AppCompatActivity {
         playerName = getIntent().getStringExtra("Name_key");
         txt_name.setText("Player name: " + playerName);
         txt_totalScore.setText("Total score: " + totalScore);
+        score = Integer.parseInt(totalScore);
 
     }
 
     public void goToMenuActivity() {
         Intent intent = new Intent(GameOver.this, Menu.class);
-        //   Intent intent = new Intent(GameOver.this, locationActivity.class);
         startActivity(intent);
     }
 }
