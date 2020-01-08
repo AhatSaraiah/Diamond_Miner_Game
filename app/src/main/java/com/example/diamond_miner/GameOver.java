@@ -39,7 +39,17 @@ public class GameOver extends AppCompatActivity {
         setTotalScore();
         button_highScoreLayout = findViewById(R.id.button_highScoreLayout);
 
+        Bundle bun = getIntent().getExtras();
+        if (bun != null) {
+           // score = b.getInt(Constants.SCORE_KEY);
+            score = Integer.parseInt(totalScore);
+            latitude = bun.getDouble(Constants.LATITUDE_KEY, latitude);
+            longitude =bun.getDouble(Constants.LONGITUDE_KEY, longitude);
+        }
+       // score = Integer.parseInt(totalScore);
+//
 
+        playerManager = new PlayerManager(GameOver.this);
         menu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 goToMenuActivity();
@@ -54,14 +64,6 @@ public class GameOver extends AppCompatActivity {
             }
         });
 
-        Bundle b = getIntent().getExtras();
-        if (b != null) {
-            score = b.getInt(Constants.SCORE_KEY);
-            latitude = b.getDouble(Constants.LATITUDE_KEY, latitude);
-            longitude = b.getDouble(Constants.LONGITUDE_KEY, longitude);
-        }
-
-        playerManager = new PlayerManager(GameOver.this);
     }
 
 
@@ -70,7 +72,6 @@ public class GameOver extends AppCompatActivity {
 
         DateFormat df = new SimpleDateFormat(Constants.DATE_FORMAT);
         String date = df.format(Calendar.getInstance().getTime());
-        score = Integer.parseInt(totalScore);
 
         if (newHighScore) {
             player p = new player(playerName, score, date, latitude, longitude);
@@ -84,7 +85,6 @@ public class GameOver extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        score = Integer.parseInt(totalScore);
         if (score > playerManager.getLastPlace() || playerManager.getRecords().size() < Constants.ARRAY_MAX_SIZE) {
             newHighScore = true;
         } else {
@@ -100,7 +100,6 @@ public class GameOver extends AppCompatActivity {
         playerName = getIntent().getStringExtra("Name_key");
         txt_name.setText("Player name: " + playerName);
         txt_totalScore.setText("Total score: " + totalScore);
-        score = Integer.parseInt(totalScore);
 
     }
 

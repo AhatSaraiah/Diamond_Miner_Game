@@ -62,13 +62,11 @@ public class player implements Comparable<player> {
 
     @Override
     public String toString() {
-        return "player{" +
-                "name='" + name + '\'' +
+        return "player[" +
+                "name=' " + name + '\'' +
                 ", score=" + score +
-                ", date='" + date + '\'' +
-                ", latitude=" + latitude +
-                ", longitude=" + longitude +
-                '}';
+                ", date=' " + date + '\'' +
+                ']';
     }
 
     @Override
