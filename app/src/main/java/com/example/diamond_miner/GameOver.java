@@ -25,7 +25,6 @@ public class GameOver extends AppCompatActivity {
     private double latitude;
     private double longitude;
     private PlayerManager playerManager;
-    private TextView txt_notHighScore;
     private boolean newHighScore = false;
 
 
@@ -38,7 +37,6 @@ public class GameOver extends AppCompatActivity {
         gameOver = findViewById(R.id.gameOver);
         signal.gameOverAnimate(gameOver);
         setTotalScore();
-        txt_notHighScore = findViewById(R.id.txt_notHighScore);
         button_highScoreLayout = findViewById(R.id.button_highScoreLayout);
 
 
@@ -88,10 +86,8 @@ public class GameOver extends AppCompatActivity {
         super.onStart();
         score = Integer.parseInt(totalScore);
         if (score > playerManager.getLastPlace() || playerManager.getRecords().size() < Constants.ARRAY_MAX_SIZE) {
-            txt_notHighScore.setVisibility(View.INVISIBLE);
             newHighScore = true;
         } else {
-            txt_notHighScore.setVisibility(View.VISIBLE);
             newHighScore = false;
         }
     }
