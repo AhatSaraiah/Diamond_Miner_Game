@@ -4,16 +4,42 @@ public class player implements Comparable<player> {
     private String name;
     private int score;
     private String date;
+    private double latitude;
+    private double longitude;
 
+    public player() {
+    }
 
-    public player(String name, int score, String date) {
+    public player(String name,int score,String date, double latitude,double longitude) {
         this.name = name;
         this.score = score;
         this.date = date;
-
+        this.latitude = latitude;
+        this.longitude = longitude;
     }
 
-    public player() {
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
     }
 
 
@@ -40,6 +66,8 @@ public class player implements Comparable<player> {
                 "name='" + name + '\'' +
                 ", score=" + score +
                 ", date='" + date + '\'' +
+                ", latitude=" + latitude +
+                ", longitude=" + longitude +
                 '}';
     }
 

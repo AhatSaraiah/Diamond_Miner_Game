@@ -22,6 +22,8 @@ public class GameOver extends AppCompatActivity {
     private TextView txt_totalScore;
     private TextView txt_name;
     private String playerName;
+    private double latitude;
+    private double longitude;
     private PlayerManager playerManager;
     private TextView txt_notHighScore;
     private boolean newHighScore = false;
@@ -39,6 +41,7 @@ public class GameOver extends AppCompatActivity {
         txt_notHighScore = findViewById(R.id.txt_notHighScore);
         button_highScoreLayout = findViewById(R.id.button_highScoreLayout);
 
+
         menu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 goToMenuActivity();
@@ -52,18 +55,44 @@ public class GameOver extends AppCompatActivity {
                 clickOnHighScoreBtn();
             }
         });
+
+        Bundle b = getIntent().getExtras();
+        if (b != null) {
+            score = b.getInt(Constants.SCORE_KEY);
+            latitude = b.getDouble(Constants.LATITUDE_KEY, latitude);
+            longitude = b.getDouble(Constants.LONGITUDE_KEY, longitude);
+        }
+
+        playerManager = new PlayerManager(GameOver.this);
     }
 
 
     public void clickOnHighScoreBtn() {
+        Intent intent = new Intent(GameOver.this, Map.class);
+
         DateFormat df = new SimpleDateFormat(Constants.DATE_FORMAT);
         String date = df.format(Calendar.getInstance().getTime());
+        score = Integer.parseInt(totalScore);
+
         if (newHighScore) {
-            player p = new player(playerName, score, date);
-            playerManager.addUser(p);
+            player p = new player(playerName, score, date, latitude, longitude);
+            playerManager.addPlayer(p);
         }
+        GameOver.this.startActivity(intent);
+        finish();
 
+    }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if (score > playerManager.getLastPlace() || playerManager.getRecords().size() < Constants.ARRAY_MAX_SIZE) {
+            txt_notHighScore.setVisibility(View.INVISIBLE);
+            newHighScore = true;
+        } else {
+            txt_notHighScore.setVisibility(View.VISIBLE);
+            newHighScore = false;
+        }
     }
 
 

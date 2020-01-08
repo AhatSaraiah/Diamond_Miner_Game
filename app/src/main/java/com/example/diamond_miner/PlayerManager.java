@@ -34,7 +34,7 @@ public class PlayerManager {
     }
 
 
-    public void addUser(player user) {
+    public void addPlayer(player user) {
         players.add(user);
         Collections.sort(players);
         while (players.size() > Constants.ARRAY_MAX_SIZE) {
