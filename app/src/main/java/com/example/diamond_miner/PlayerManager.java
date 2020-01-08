@@ -13,7 +13,6 @@ import java.util.Collections;
 
 public class PlayerManager {
 
-    // private  Context context;
     private Activity activity;
     private ArrayList<player> players;
     private String jsn;
@@ -34,8 +33,8 @@ public class PlayerManager {
     }
 
 
-    public void addPlayer(player user) {
-        players.add(user);
+    public void addPlayer(player p) {
+        players.add(p);
         Collections.sort(players);
         while (players.size() > Constants.ARRAY_MAX_SIZE) {
             players.remove(players.size() - 1);

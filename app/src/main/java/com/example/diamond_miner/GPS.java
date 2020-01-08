@@ -63,7 +63,6 @@ public class GPS extends Service {
 
         locationManager = (LocationManager) getApplicationContext().getSystemService(Context.LOCATION_SERVICE);
 
-        //noinspection MissingPermission
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 0, listener);
 
         mLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
@@ -80,7 +79,6 @@ public class GPS extends Service {
     public void onDestroy() {
         super.onDestroy();
         if (locationManager != null) {
-            //noinspection MissingPermission
             locationManager.removeUpdates(listener);
         }
     }

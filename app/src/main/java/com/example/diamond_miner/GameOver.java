@@ -86,6 +86,7 @@ public class GameOver extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+        score = Integer.parseInt(totalScore);
         if (score > playerManager.getLastPlace() || playerManager.getRecords().size() < Constants.ARRAY_MAX_SIZE) {
             txt_notHighScore.setVisibility(View.INVISIBLE);
             newHighScore = true;
