@@ -41,13 +41,11 @@ public class GameOver extends AppCompatActivity {
 
         Bundle bun = getIntent().getExtras();
         if (bun != null) {
-           // score = b.getInt(Constants.SCORE_KEY);
             score = Integer.parseInt(totalScore);
             latitude = bun.getDouble(Constants.LATITUDE_KEY, latitude);
-            longitude =bun.getDouble(Constants.LONGITUDE_KEY, longitude);
+            longitude = bun.getDouble(Constants.LONGITUDE_KEY, longitude);
         }
-       // score = Integer.parseInt(totalScore);
-//
+
 
         playerManager = new PlayerManager(GameOver.this);
         menu.setOnClickListener(new View.OnClickListener() {

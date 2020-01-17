@@ -343,7 +343,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void left() {
 
-        if (miners[1].getVisibility() == View.VISIBLE) {
+
+        if (miners[0].getVisibility() == View.VISIBLE) {
+            miners[0].setVisibility(View.INVISIBLE);
+            miners[4].setVisibility(View.VISIBLE);
+        }
+        else if (miners[1].getVisibility() == View.VISIBLE) {
             miners[1].setVisibility(View.INVISIBLE);
             miners[0].setVisibility(View.VISIBLE);
 
@@ -378,6 +383,10 @@ public class MainActivity extends AppCompatActivity {
         } else if (miners[3].getVisibility() == View.VISIBLE) {
             miners[3].setVisibility(View.INVISIBLE);
             miners[4].setVisibility(View.VISIBLE);
+
+        }else if (miners[4].getVisibility() == View.VISIBLE) {
+            miners[4].setVisibility(View.INVISIBLE);
+            miners[0].setVisibility(View.VISIBLE);
 
         }
 

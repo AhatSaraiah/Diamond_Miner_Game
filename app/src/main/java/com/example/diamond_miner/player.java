@@ -10,7 +10,7 @@ public class player implements Comparable<player> {
     public player() {
     }
 
-    public player(String name,int score,String date, double latitude,double longitude) {
+    public player(String name, int score, String date, double latitude, double longitude) {
         this.name = name;
         this.score = score;
         this.date = date;

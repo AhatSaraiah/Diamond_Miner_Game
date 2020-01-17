@@ -38,8 +38,8 @@ public class GPS extends Service {
                 Intent i = new Intent(Constants.ACTION_KEY);
                 i.putExtra(Constants.LONGITUDE_KEY, location.getLongitude());
                 i.putExtra(Constants.LATITUDE_KEY, location.getLatitude());
-                Log.d("loc" , location.getLongitude() + " foq " +location.getLatitude() );
-                Log.d("loc" , mLocation.getLongitude() + "  foq " +mLocation.getLatitude() );
+                Log.d("loc", location.getLongitude() + " foq " + location.getLatitude());
+                Log.d("loc", mLocation.getLongitude() + "  foq " + mLocation.getLatitude());
                 sendBroadcast(i);
             }
 
