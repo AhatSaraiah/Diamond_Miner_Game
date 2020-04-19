@@ -1,6 +1,7 @@
+
+<a href="http://fvcproductions.com"><img src="https://github.com/AhatSaraiah/Diamond_Miner_Game/blob/master/app/src/main/res/drawable/diamond.png"  ></a>
+
 # Diamond Miner Game
-
-
 >A miner tries to get diamonds and avoids stones
 
 
