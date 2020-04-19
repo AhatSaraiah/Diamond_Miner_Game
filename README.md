@@ -1,5 +1,5 @@
 
-<img src="https://github.com/AhatSaraiah/Diamond_Miner_Game/blob/master/app/src/main/res/drawable/diamond.png"  ></a>
+<img src="https://github.com/AhatSaraiah/Diamond_Miner_Game/blob/master/app/src/main/res/drawable/diamond.png"  >
 
 # Diamond Miner Game
 >A miner tries to get diamonds and avoids stones
